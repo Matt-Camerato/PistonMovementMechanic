@@ -275,7 +275,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: a491b2bc2f416b24d92dd3a6ec9841e5, type: 3}
-  m_Color: {r: 0.49019608, g: 0.43137255, b: 0.16862746, a: 1}
+  m_Color: {r: 0.8396226, g: 0.6846154, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 652218630989811391}
   - component: {fileID: 652218630989811384}
   - component: {fileID: 652218630989811269}
+  - component: {fileID: 652218630989811392}
   m_Layer: 4
   m_Name: W_Piston
   m_TagString: Untagged
@@ -318,6 +319,25 @@ Transform:
   m_Father: {fileID: 652218631329402372}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &652218630989811392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652218630989811390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a1c57478c313e4eaecc3f0ff2e57de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectKey: 119
+  _minLength: 0.2
+  _maxLength: 6
+  _extendSpeed: 3
+  _retractSpeed: 5
+  _activeColor: {r: 0.8392157, g: 0.6862745, b: 0, a: 1}
+  _defaultColor: {r: 0.5294118, g: 0.4627451, b: 0.17254902, a: 1}
 --- !u!61 &652218631325779456
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -355,6 +375,7 @@ GameObject:
   - component: {fileID: 652218631325779578}
   - component: {fileID: 652218631325779579}
   - component: {fileID: 652218631325779456}
+  - component: {fileID: 652218631325779580}
   m_Layer: 4
   m_Name: A_Piston
   m_TagString: Untagged
@@ -429,6 +450,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &652218631325779580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652218631325779577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a1c57478c313e4eaecc3f0ff2e57de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectKey: 97
+  _minLength: 0.2
+  _maxLength: 6
+  _extendSpeed: 3
+  _retractSpeed: 5
+  _activeColor: {r: 0.8392157, g: 0.6862745, b: 0, a: 1}
+  _defaultColor: {r: 0.5294118, g: 0.4627451, b: 0.17254902, a: 1}
 --- !u!4 &652218631329402372
 Transform:
   m_ObjectHideFlags: 0
@@ -580,16 +620,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e56392cfe2261a45b22a23d30500a77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pistonExtendSpeed: 3
-  pistonRetractSpeed: 5
-  pistonMinLength: 0.2
-  pistonMaxLength: 6
-  defaultPistonColor: {r: 0.4901961, g: 0.43137258, b: 0.16862746, a: 1}
-  activePistonColor: {r: 0.86666673, g: 0.70980394, b: 0, a: 1}
-  wPiston: {fileID: 652218630989811384}
-  aPiston: {fileID: 652218631325779579}
-  sPiston: {fileID: 652218631538505546}
-  dPiston: {fileID: 652218631933649555}
 --- !u!1 &652218631538505544
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,6 +631,7 @@ GameObject:
   - component: {fileID: 652218631538505545}
   - component: {fileID: 652218631538505546}
   - component: {fileID: 652218631538505559}
+  - component: {fileID: 652218631538505560}
   m_Layer: 4
   m_Name: S_Piston
   m_TagString: Untagged
@@ -701,6 +732,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &652218631538505560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652218631538505544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a1c57478c313e4eaecc3f0ff2e57de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectKey: 115
+  _minLength: 0.2
+  _maxLength: 6
+  _extendSpeed: 3
+  _retractSpeed: 5
+  _activeColor: {r: 0.8392157, g: 0.6862745, b: 0, a: 1}
+  _defaultColor: {r: 0.5294118, g: 0.4627451, b: 0.17254902, a: 1}
 --- !u!1 &652218631933649553
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,6 +762,7 @@ GameObject:
   - component: {fileID: 652218631933649554}
   - component: {fileID: 652218631933649555}
   - component: {fileID: 652218631933649560}
+  - component: {fileID: 652218631933649561}
   m_Layer: 4
   m_Name: D_Piston
   m_TagString: Untagged
@@ -812,6 +863,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &652218631933649561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652218631933649553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a1c57478c313e4eaecc3f0ff2e57de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectKey: 100
+  _minLength: 0.2
+  _maxLength: 6
+  _extendSpeed: 3
+  _retractSpeed: 5
+  _activeColor: {r: 0.8392157, g: 0.6862745, b: 0, a: 1}
+  _defaultColor: {r: 0.5294118, g: 0.4627451, b: 0.17254902, a: 1}
 --- !u!61 &808244209509509208
 BoxCollider2D:
   m_ObjectHideFlags: 0
